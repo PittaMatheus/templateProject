@@ -15,7 +15,7 @@ class Routes extends Component {
   render() {
     return <section className="content">
       <Layout>
-        <LayoutHeader />
+        <LayoutHeader colorBackGround={"#00474f"} />
         <Content className="site-layout" style={{ padding: '0 15px', marginTop: 64 }}>
           <LayoutBread />
           <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
