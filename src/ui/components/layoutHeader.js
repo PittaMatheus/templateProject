@@ -32,6 +32,11 @@ class LayoutHeader extends Component {
               <FontAwesomeIcon icon={faCogs} />
             </Link>
           </Menu.Item>
+          <Menu.Item key="4">
+            <Link to={'/login'}>
+              <FontAwesomeIcon icon={faCogs} />
+            </Link>
+          </Menu.Item>
         </Menu>
       </Header>
     );

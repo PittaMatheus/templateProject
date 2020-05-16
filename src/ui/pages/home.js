@@ -48,8 +48,8 @@ class Home extends Component {
         xs: 1,
         sm: 2,
         md: 4,
-        lg: 2,
-        xl: 2,
+        lg: 4,
+        xl: 4,
         xxl: 3
       }
     }

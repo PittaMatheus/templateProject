@@ -1,13 +1,33 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
+import DraggableModal from "../components/draggableModal"
 
 
 class Login extends Component {
-  render() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      visible: true
+    }
+  }
 
-    return <div>
-    Login
-  </div>
+
+  close = () => {
+    this.setState({
+      visible: false
+    })
+  }
+
+
+  render() {
+    const { visible } = this.state
+    return <>
+      <DraggableModal
+        title={<Fragment>'teesteeeee'</Fragment>}
+        onCancel={this.close}
+        visible={visible}
+      ></DraggableModal>
+    </>
   }
 }
+export default Login;
 
-export default Login; 

@@ -6,10 +6,16 @@ import Home from './pages/home'
 import Teste from './pages/teste'
 import ConfLayout from './pages/confLayout'
 import LayoutHeader from "./components/layoutHeader";
+import Loading from "./components/loading";
+
 import LayoutBread from "./components/layoutBread";
 import LayoutFooter from "./components/layoutFooter";
 
+const Login = lazy(() => import('./pages/login'));
+
+
 const { Content } = Layout;
+
 
 class Routes extends Component {
   render() {
@@ -19,13 +25,17 @@ class Routes extends Component {
         <Content className="site-layout" style={{ padding: '0 15px', marginTop: 64 }}>
           <LayoutBread />
           <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
-            <Switch>
-              <Redirect from="/" exact to="/home" />
-              <Route path="/home" exact component={Home} />
-              <Route path="/teste" exact component={Teste} />
-              <Route path="/conf" exact component={ConfLayout} />
-              {/* <Route component={NoMatch} /> */}
-            </Switch>
+            <Suspense fallback={<Loading loading />}>
+              <Switch>
+                <Redirect from="/" exact to="/home" />
+                <Route path="/home" exact component={Home} />
+                <Route path="/teste" exact component={Teste} />
+                <Route path="/conf" exact component={ConfLayout} />
+                <Route path="/login" exact component={Login} />
+
+                {/* <Route component={NoMatch} /> */}
+              </Switch>
+            </Suspense>
           </div>
         </Content>
         <LayoutFooter text={"exemplo Footer"} />

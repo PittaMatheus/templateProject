@@ -27,3 +27,28 @@
 .setGrid {
   width: 40%
 }
+
+
+.ant-modal-content{
+  right: 50% !important;
+  top: 50% !important;
+  margin-top: 20px !important;
+}
+
+.ant-modal-wrap{
+  overflow: hidden;
+}
+
+.ui-draggable-modal .ant-modal-header{
+  cursor: move;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently */
+}
+
+
+
+
