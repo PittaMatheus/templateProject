@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import SetGrid from "../components/setGrid";
+
 class ConfLayout extends Component {
   render() {
-    return <div>
-    ConfLayout
-  </div>
+    return <div className="setGrid">
+      <SetGrid />
+    </div>
   }
 }
 

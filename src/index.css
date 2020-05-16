@@ -23,3 +23,7 @@
 .ant-menu.ant-menu-dark .ant-menu-item-selected {
   background-color: #08979c !important;
 }
+
+.setGrid {
+  width: 40%
+}
